@@ -1,0 +1,89 @@
+---
+title: "{{cookiecutter.package_name}}"
+subtitle: "Análisis de datos de {{cookiecutter.package_name}}"
+date: last-modified
+author: "{{cookiecutter.author_name}}"
+format:
+    html:
+      toc: true
+      toc-depth: 3
+      number-sections: true
+      theme: morph
+      toc-title: Contenido
+      fontsize: 1.1em
+      mainfont: "IBM Plex Sans"
+      linestretch: 1.7
+      code-tools:
+        source: true
+        toggle: true
+        caption: none
+      code-copy: true
+      code-fold: true
+      code-link: true
+      highlight-style: oblivion
+      smooth-scroll: true
+      comments:
+        hypothesis: 
+          theme: clean
+      link-external-icon: true
+editor: source
+---
+```{r packages, include=FALSE}
+# Cargar las librerías necesarias
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+    arrow,
+    formattable,
+    highcharter,
+    lubridate,
+    tidyverse
+)
+source("R/functions.R")
+```
+
+```{r read-data, include=FALSE}
+data_dir <- "data/2-processed/"
+data_list <- list.files(
+    path = data_dir,
+    pattern = "*.feather",
+    full.names = TRUE
+)
+list2env(
+    lapply(
+        setNames(
+            data_list,
+            make.names(gsub(
+                paste0(data_dir, "/|*.feather$"),
+                "",
+                data_list
+            ))
+        ),
+        read_feather
+    ),
+    envir = .GlobalEnv
+)
+```
+
+# Summary
+
+::: {.callout-caution collapse="true"}
+## Sobre el origen de los datos
+
+Los datos con los que se generan los siguientes analisis provienen de:
+
+-   Google Analytics view ID: {{cookiecutter.ga_view_id}}
+:::
+
+# Section01
+
+Lorem
+
+## Subsection01
+
+### Analysis01
+
+
+```{r section01}
+# Code
+
+```

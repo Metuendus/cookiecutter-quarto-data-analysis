@@ -1,0 +1,11 @@
+{
+    "author_name": "José Carlos Corona",
+    "client_name": "Coppel",
+    "author_email": "josecarloscorona.c@gmail.com",
+    "package_name": "cookiecutter_quarto_data_analysis",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "package_version": "0.1.0",
+    "package_description": "Cookiecutter template for a data analysis project using Quarto",
+    "ga_view_id": "123456789",
+    "ga_auth_email": "analytics@epa.digital"
+}

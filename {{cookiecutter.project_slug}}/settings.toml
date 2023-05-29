@@ -1,0 +1,11 @@
+title = "{{ cookiecutter.package_name }}"
+version = "{{ cookiecutter.package_version }}"
+
+[client]
+name = "{{ cookiecutter.client_name }}"
+
+[ga]
+enabled = true
+view_id = "{{ cookiecutter.ga_view_id }}"
+auth_email = "{{ cookiecutter.ga_auth_email }}"
+dates = ["90daysAgo", "yesterday"]

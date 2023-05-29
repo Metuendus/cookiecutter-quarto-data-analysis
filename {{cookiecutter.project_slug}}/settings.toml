@@ -1,5 +1,5 @@
-title = "{{ cookiecutter.package_name }}"
-version = "{{ cookiecutter.package_version }}"
+title = "{{ cookiecutter.project_name }}"
+version = "{{ cookiecutter.project_version }}"
 
 [client]
 name = "{{ cookiecutter.client_name }}"

@@ -5,14 +5,11 @@ date: last-modified
 author: "{{cookiecutter.author_name}}"
 format:
     html:
+      theme: cosmo
       toc: true
       toc-depth: 3
       number-sections: true
-      theme: morph
       toc-title: Contenido
-      fontsize: 1.1em
-      mainfont: "IBM Plex Sans"
-      linestretch: 1.7
       code-tools:
         source: true
         toggle: true
@@ -22,9 +19,6 @@ format:
       code-link: true
       highlight-style: oblivion
       smooth-scroll: true
-      comments:
-        hypothesis: 
-          theme: clean
       link-external-icon: true
 editor: source
 ---
@@ -74,16 +68,45 @@ Los datos con los que se generan los siguientes analisis provienen de:
 -   Google Analytics view ID: {{cookiecutter.ga_view_id}}
 :::
 
-# Section01
 
-Lorem
+# Requerimientos de negocio
+## ¿Cuál es la **situación**?
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
+sapien sit amet nunc aliquam aliquet. Donec euismod, nisl vitae
+consectetur aliquam, nunc nisl aliquam nunc, vitae aliquam nisl nisl
+vitae nisl.
 
-## Subsection01
+### Preguntas descriptivas
+- Lorem ipsum
+- Lorem ipsum
+- Lorem ipsum
 
-### Analysis01
+### Preguntas inferenciales
+- Lorem ipsum
+- Lorem ipsum
+- Lorem ipsum
+
+### Preguntas predictivas
+- Lorem ipsum
+- Lorem ipsum
+- Lorem ipsum
+
+## ¿Cuál es la **oportunidad** y qué tan grande es?
+
+## ¿Cuáles son las **acciones** que tomaremos?
 
 
-```{r section01}
-# Code
+# Requerimientos de datos
+## ¿Qué datos necesitamos para responder a las preguntas de los **requerimientos de negocio**?
+### Fuentes de datos
+- Google Analytics view ID: {{cookiecutter.ga_view_id}}
 
-```
+### Diccionario de datos
+- `date`: fecha
+- `productCategoryHierarchy`: categoria del producto
+- `product`: producto
+- `productSku`: sku del producto
+- `productBrand`: marca del producto
+- `ga:itemQuantity`: cantidad de productos vendidos
+- `ga:uniquePurchases`: cantidad de compras únicas
+- `ga:itemRevenue`: ingresos

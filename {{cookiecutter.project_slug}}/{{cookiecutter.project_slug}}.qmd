@@ -58,7 +58,10 @@ list2env(
 )
 ```
 
-# Summary
+# Extracto
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien
+sit amet nunc aliquam aliquet. Donec euismod, nisl vitae consectetur
+aliquam, nunc nisl aliquam nunc, vitae aliquam nisl nisl vitae nisl.
 
 ::: {.callout-caution collapse="true"}
 ## Sobre el origen de los datos
@@ -102,11 +105,10 @@ vitae nisl.
 - Google Analytics view ID: {{cookiecutter.ga_view_id}}
 
 ### Diccionario de datos
-- `date`: fecha
-- `productCategoryHierarchy`: categoria del producto
-- `product`: producto
-- `productSku`: sku del producto
-- `productBrand`: marca del producto
-- `ga:itemQuantity`: cantidad de productos vendidos
-- `ga:uniquePurchases`: cantidad de compras únicas
-- `ga:itemRevenue`: ingresos
+#### `products`
+| Variable | Descripción |
+|:--------:|:-----------:|
+| `date` | fecha |
+| `productCategoryHierarchy` | categoria del producto |
+| `product` | producto |
+| `ga:itemRevenue` | ingresos |
